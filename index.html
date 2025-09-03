@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>SAHIL FOOD CENTER</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .hindi-font {
+            font-family: "Noto Sans Devanagari", sans-serif;
+        }
+
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+        }
+
+        .table-input {
+            outline: none;
+            border: none;
+            width: 100%;
+            text-align: center;
+            padding-inline: 5px;
+        }
+
+        @media print {
+            .print {
+                display: none;
+            }
+
+            input {
+                background: transparent;
+            }
+
+            table {
+                position: relative;
+            }
+
+            table::before {
+                content: "S";
+                position: absolute;
+                bottom: 5%;
+                left: 30%;
+                transform: translate(-50%, -50%);
+                font-size: 500px;
+                color: rgba(0, 0, 0, 0.1);
+                z-index: -1;
+                pointer-events: none;
+                white-space: nowrap;
+                transform: rotate(30deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body class="px-8">
+    <div class="rounded p-6 max-w-3xl mx-auto">
+        <div class="text-center">
+            <div class="flex justify-between">
+                <img class="w-[120px] h-[120px] mb-[-70px] ml-[-10px]" style="transform: scaleX(-1); z-index: -1"
+                    src="chicken2.jpeg" />
+                <img class="w-[120px] h-[120px] mb-[-70px]" src="chicken2.jpeg" />
+            </div>
+            <h1 class="text-blue-600 font-bold text-4xl mb-2">
+                <title>Sahil Food Center</title>
+                SAHIL FOOD <span class="bg-blue-600 text-white px-1">CENTER</span>
+            </h1>
+            <div class="text-md text-blue-600 font-[500]">
+                <p>
+                    B/13 Shreepat Yadav Chawal, 90 Feet. Road, Krishna Nagar </p>
+                <p>Nr. Dosti Complex Sakinaka Mumbai-400072</p>
+
+                <div class="flex mt-2 justify-around">
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        7506022264
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        7710011844
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        9930721051
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <div class="text-red-600 flex justify-between text-sm font-bold">
+                <p>
+                    <span>Name: </span>
+                    <input class="outline-none border-b border-red-600 text-center name-input" type="text" />
+                </p>
+                <p>
+                    <span>Date:</span>
+                    <input class="outline-none border-b border-red-600 w-[82px]" type="text" id="date" />
+                </p>
+            </div>
+        </div>
+
+        <table class="w-full mt-4 border border-red-600">
+            <thead>
+                <tr class="bg-red-100">
+                    <th class="border border-red-600 text-center px-2 py-1 text-sm">
+                        DATE
+                    </th>
+                    <th class="border border-red-600 text-center px-2 py-1 text-sm">
+                        QTY
+                    </th>
+                    <th class="border border-red-600 text-center px-2 py-1 text-sm">
+                        WEIGHT
+                    </th>
+                    <th class="border border-red-600 text-center px-2 py-1 text-sm">
+                        RATE
+                    </th>
+                    <th class="border border-red-600 text-center px-2 py-1 text-sm">
+                        AMOUNT
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border border-red-600 h-8 ">
+                        <input class="table-input dateInput" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input qty-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input weight-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input rate-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input disabled class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600 h-8">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input qty-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input weight-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input rate-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input disabled class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600 h-8">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input qty-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input weight-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input rate-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input disabled class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600 h-8">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input qty-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input weight-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input rate-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input disabled class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600 h-8">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input qty-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input weight-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input rate-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input disabled class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600 h-8">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input qty-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input weight-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input rate-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input disabled class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="border border-red-600 h-8">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input qty-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input weight-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input rate-input" type="number" />
+                    </td>
+                    <td class="border border-red-600">
+                        <input disabled class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600" colspan="4">
+                        <div class="my-1 text-right pr-2">
+                            <p class="font-bold">Total Amount</p>
+                        </div>
+                    </td>
+                    <td class="border border-red-600">
+                        <input disabled class="table-input bg-transparent total-amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600 h-8" colspan="3">
+                        <input disabled class="table-input qty-input" type="number" />
+                    <td class="border border-red-600">
+                        <input class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600 h-8" colspan="3">
+                        <input disabled class="table-input qty-input" type="number" />
+                    <td class="border border-red-600">
+                        <input class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600 h-8" colspan="3">
+                        <input disabled class="table-input qty-input" type="number" />
+                    <td class="border border-red-600">
+                        <input class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600 h-8" colspan="3">
+                        <input disabled class="table-input qty-input" type="number" />
+                    <td class="border border-red-600">
+                        <input class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <!-- Repeat the row -->
+                <tr>
+                    <td class="border border-red-600">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600 h-8" colspan="3">
+                        <input disabled class="table-input qty-input" type="number" />
+                    <td class="border border-red-600">
+                        <input class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <!-- Repeat the row -->
+                <tr>
+                    <td class="border border-red-600">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600 h-8" colspan="3">
+                        <input disabled class="table-input qty-input" type="number" />
+                    <td class="border border-red-600">
+                        <input class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <!-- Repeat the row -->
+                <tr>
+                    <td class="border border-red-600">
+                        <input class="table-input" type="text" />
+                    </td>
+                    <td class="border border-red-600 h-8" colspan="3">
+                        <input disabled class="table-input qty-input" type="number" />
+                    <td class="border border-red-600">
+                        <input class="table-input bg-transparent amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600" colspan="4">
+                        <div class="my-1 text-right pr-2">
+                            <p class="font-bold">Paid Amount</p>
+                        </div>
+                    </td>
+                    <td class="border border-red-600">
+                        <input disabled class="table-input bg-transparent paid-amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600" colspan="4">
+                        <div class="my-1 text-right pr-2">
+                            <p class="font-bold">Sub Total</p>
+                        </div>
+                    </td>
+                    <td class="border border-red-600">
+                        <input disabled class="table-input bg-transparent subtotal-amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600" colspan="4">
+                        <div class="my-1 text-right pr-2">
+                            <p class="font-bold">Balance Amount</p>
+                        </div>
+                    </td>
+                    <td class="border border-red-600">
+                        <input class="table-input bg-transparent balance-amount-input" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border border-red-600" colspan="4">
+                        <div class="my-1 text-right pr-2">
+                            <p class="font-bold">Grand Total</p>
+                        </div>
+                    </td>
+                    <td class="border border-red-600">
+                        <input disabled class="table-input bg-transparent grand-total-input" type="number" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="mt-4 text-sm text-red-600 font-bold hindi-font">
+            माल लेते समय आप वजन और माल दोनों देख कर लीजिए।
+            गाड़ी जाने के बाद शिकायत नहीं सुनी जाएगी।
+        </p>
+        <div class="text-center print">
+            <button type="button" class="bg-red-300 border border-red-600 text-md text-black px-2"
+                onclick="window.print()">
+                Print
+            </button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+        const dateInput = document.querySelector("#date");
+        const today = new Date();
+        const current_date = today.getDate().toString().padStart(2, "0");
+        const current_month = (today.getMonth() + 1).toString().padStart(2, "0");
+        const current_year = today.getFullYear();
+        dateInput.value = `${current_date}/${current_month}/${current_year}`;
+
+        const weightInputs = document.querySelectorAll(".weight-input");
+        const rateInputs = document.querySelectorAll(".rate-input");
+        const amountInputs = document.querySelectorAll(".amount-input");
+        const totalAmountInput = document.querySelector(".total-amount-input");
+        const paidAmountInput = document.querySelector(".paid-amount-input");
+        const balanceAmountInput = document.querySelector(
+            ".balance-amount-input"
+        );
+        const grandTotalInput = document.querySelector(".grand-total-input");
+
+        const nameInput = document.querySelector(".name-input");
+        const subtotalInput = document.querySelector(".subtotal-amount-input");
+
+
+
+        // calculating amount
+        weightInputs.forEach((weightInput) => {
+            weightInput.addEventListener("input", calculateAmount);
+        });
+        rateInputs.forEach((rateInput) => {
+            rateInput.addEventListener("input", calculateAmount);
+        });
+
+        function calculateAmount() {
+            weightInputs.forEach((weightInput, index) => {
+                const weight = weightInput.value;
+                const rate = rateInputs[index].value;
+                if (!isNaN(rate) && !isNaN(weight)) {
+                    const result = weight * rate;
+                    amountInputs[index].value = result == 0 ? "" : result.toFixed(2);
+                }
+                calculateTotal();
+            });
+        }
+
+        // calculating total amount
+
+        function calculateTotal() {
+            const sevenAmountInputs = Array.from(amountInputs).slice(0, 7);
+            const result = sevenAmountInputs.reduce((acc, input) => {
+                const amount = parseFloat(input.value) || 0;
+                return amount + acc;
+            }, 0);
+
+            totalAmountInput.value = result == 0 ? "" : result.toFixed(2);
+            calculateSubTotalAmount();
+        }
+
+        //calculating paid amount
+
+        function calculatePaidAmount() {
+
+            const sevenTo13Inputs = Array.from(amountInputs).slice(7);
+            sevenTo13Inputs.forEach(input => {
+                input.oninput = () => {
+                    const result = sevenTo13Inputs.reduce((acc, input) => {
+                        const amount = parseFloat(input.value) || 0;
+                        return amount + acc;
+                    }, 0);
+                    paidAmountInput.value = result == 0 ? "" : result.toFixed(2);
+                    calculateSubTotalAmount();
+                }
+            })
+
+        }
+
+        calculatePaidAmount();
+
+        // calculating GrandTotal
+
+        paidAmountInput.addEventListener("input", calculateGrandTotal);
+        balanceAmountInput.addEventListener("input", calculateGrandTotal);
+        totalAmountInput.addEventListener("input", calculateGrandTotal);
+
+        function calculateGrandTotal() {
+            const subtotalAmount = parseFloat(subtotalInput.value) || 0;
+            const balanceAmount = parseFloat(balanceAmountInput.value || 0);
+
+            // if (
+            //     subtotalInput.value.trim() === "" ||
+            //   balanceAmountInput.value.trim() === ""
+            // ) {
+            //   grandTotalInput.value = "";
+            //   return;
+            // }
+
+            const result = subtotalAmount + balanceAmount;
+            grandTotalInput.value = result > 0 ? result.toFixed(2) : "";
+        }
+
+        nameInput.addEventListener("input", changeTitle);
+
+        function changeTitle() {
+            if (nameInput.value.trim() != "") {
+                document.title = nameInput.value;
+            }
+        }
+
+        // function print() {
+        //   // html2canvas(document.body, { background: true }).then((canvas) => {
+        //   //   const imgData = canvas.toDataURL("image/png");
+        //   //   const pdf = new jsPDF();
+        //   //   pdf.addImage(imgData, "PNG", 0, 0);
+        //   //   pdf.save(document.title + ".pdf");
+        //   // });
+        //   window.print();
+        // }
+
+        function calculateSubTotalAmount() {
+            const totalAmount = parseFloat(totalAmountInput.value) || 0;
+            const paidAmount = parseFloat(paidAmountInput.value) || 0;
+            const result = totalAmount - paidAmount;
+            subtotalInput.value = result > 0 ? result.toFixed(2) : "00";
+
+            calculateGrandTotal();
+        }
+
+
+    </script>
+</body>
+
+</html>
